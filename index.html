@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="style.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Form</title>
+  </head>
+
+  <body onblur="f2()">
+    <div id="header">
+      <h1>Validation Form</h1>
+    </div>
+
+    <div id="main">
+      <div id="success">All of the fields were successfully verified.</div>
+        <form class="myform" onsubmit="return validate(myform)" name="myform">
+          <ul>
+            <li>
+              <label>First Name:*</label>
+              <input type="text" placeholder="Enter your firstname" name="fname" onfocus="f2()"> <br />
+            </li>
+            <li>
+              <label>Last Name:</label>
+              <input type="text" placeholder="Enter your lastname" onfocus="f2()"> <br />
+            </li>
+            <li>
+              <label>Email:*</label>
+              <input type="text" placeholder="Enter your email" name="mail" onfocus="f2()"> <br />
+            </li>
+            <li>
+              <label>Password:*</label>
+                <input type="password" placeholder="Enter Password" name="pwd1" id="password" onfocus="f1()">&emsp;&emsp;
+                <span id="pbtn" style="visibility:hidden">
+                  <i class="fa fa-eye" style="font-size: 28px; margin: -20px; margin-top: 5px"></i>
+                </span>
+            </li>
+            <li>
+              <label>Confirm Password:*</label>
+              <input type="password" placeholder="Re-type Password" name="pwd2" onfocus="f2()"> <br />
+            </li>
+            <li>
+              <label>Mobile Number:*</label>
+              <input type="number" placeholder="Enter your phone number" name="num" onfocus="f2()"> <br />
+            </li>
+            <li>
+              <label>Country:</label>
+              <select id="country" name="country" onfocus="f2()"></select>
+            </li>
+            <li>
+              <button class="submit" type="submit" onfocus="f2()">Submit Form</button>
+            </li>
+            <li>
+              <p class="noti">* Denotes Required Field</p>
+            </li>
+          </ul>
+        </form>
+      </div>
+
+<script type="text/javascript" src="form.js"></script>
+  </body>
+</html>
