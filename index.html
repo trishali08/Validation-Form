@@ -4,106 +4,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Form</title>
   </head>
 
-  <body onblur="f2()">
+  <body>
     <div id="header">
       <h1>Validation Form</h1>
     </div>
 
     <div id="main">
-      <!-- <div id="success">All of the fields were successfully verified.</div> -->
-        <form class="myform" onsubmit="return validate(myform)" name="myform">
+      <form class="myform" onsubmit="return validate(myform)" name="myform">
           <ul>
             <li>
-              <div class="row">
-                <div class=".col-25">
-                  <label>First Name:*</label>
-                </div>
-                <div class=".col-75">
-                  <input type="text" placeholder="Enter your firstname" name="fname" onfocus="f2()"> <br />
-                </div>
-              </div>
+              <label>First Name:*</label>
+              <input type="text" placeholder="Enter your firstname" name="fname" onfocus="f2()"> <br />
             </li>
             <li>
-              <div class="row">
-                <div class=".col-25">
-                  <label>Last Name:</label>
-                </div>
-                <div class=".col-75">
-                  <input type="text" placeholder="Enter your lastname" onfocus="f2()"> <br />
-                </div>
-              </div>
+              <label>Last Name:</label>
+              <input type="text" placeholder="Enter your lastname" onfocus="f2()"> <br />
             </li>
             <li>
-              <div class="row">
-                <div class=".col-25">
-                  <label>Email:*</label>
-                </div>
-                <div class=".col-75">
-                  <input type="text" placeholder="Enter your email" name="mail" onfocus="f2()"> <br />
-                </div>
-              </div>
+              <label>Email:*</label>
+              <input type="text" placeholder="Enter your email" name="mail" onfocus="f2()"> <br />
             </li>
             <li>
-              <div class="row">
-                <div class=".col-25">
-                  <label>Password:*</label>
-                </div>
-                <div class=".col-75">
-                  <input type="password" placeholder="Enter Password" name="pwd1" id="password" onfocus="f1()">&emsp;&emsp;
-                  <span  class="fa fa-fw fa-eye field-icon toggle-password" id="pbtn" style="font-size: 20px; visibility:hidden; margin-left: -25px;">
-                    <!-- <i class="fa fa-eye" style="font-size: 25px; margin: -20px; margin-: 5px"></i> -->
-                  </span>
-                </div>
-              </div>
+              <label>Password:*</label>
+              <input id="password-field" type="password" class="form-control" name="password" placeholder="Enter Password" onfocus="f1()">&emsp;&emsp;
+              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="font-size: 20px; margin-left: -25px; visibility:hidden" id="btn"></span>
             </li>
             <li>
-              <div class="row">
-                <div class=".col-25">
-                  <label>Confirm Password:*</label>
-                </div>
-                <div class=".col-75">
-                  <input type="password" placeholder="Re-type Password" name="pwd2" onfocus="f2()"> <br />
-                </div>
-              </div>
+              <label>Confirm Password:*</label>
+              <input type="password" placeholder="Re-type Password" name="pwd2" onfocus="f2()"> <br />
             </li>
             <li>
-              <div class="row">
-                <div class=".col-25">
-                  <label>Mobile Number:*</label>
-                </div>
-                <div class=".col-75">
-                  <input type="number" placeholder="Enter your phone number" name="num" onfocus="f2()"> <br />
-                </div>
-              </div>
+              <label>Mobile Number:*</label>
+              <input type="number" placeholder="Enter your phone number" name="num" onfocus="f2()" required> <br />
             </li>
             <li>
-              <div class="row">
-                <div class=".col-25">
-                  <label>Country:</label>
-                </div>
-                <div class=".col-75">
-                  <select id="country" name="country" onfocus="f2()"></select>
-                </div>
-              </div>
+              <label>Country:</label>
+              <select id="country" name="country" onfocus="f2()"></select>
             </li>
             <li>
-              <div class="row">
-                <button class="submit" type="submit" onfocus="f2()">Submit Form</button>
-              </div>
+              <button class="submit" type="submit" onfocus="f2()">Submit Form</button>
             </li>
             <li>
-              <div class="row">
-                <p class="noti">* Denotes Required Field</p>
-              </div>
+              <p class="noti">* Denotes Required Field</p>
             </li>
           </ul>
         </form>
       </div>
-
-<script type="text/javascript" src="form.js"></script>
+      <script type="text/javascript" src="form.js"></script>
   </body>
 </html>

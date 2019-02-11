@@ -1,14 +1,24 @@
-/*for show password*/
+/*for show-hide password with toggle switch with hidden functionality*/
+
+$(".toggle-password").click(function() {
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});
 
 function f2(){
-  var res = document.getElementById('pbtn');
+  var res = document.getElementById('btn');
   res.style.visibility='hidden';
 }
 
 function f1() {
-  var res = document.getElementById('pbtn');
+  var res = document.getElementById('btn');
   res.style.visibility='visible';
-  const pbtn = document.querySelector("#pbtn");
+  /*const pbtn = document.querySelector("#pbtn");
   pbtn.addEventListener("click", function() {
     const pinput = document.getElementById("password");
     const type = pinput.getAttribute("type");
@@ -18,7 +28,7 @@ function f1() {
     else{
       pinput.setAttribute("type","password");
     }
-  });
+  });*/
 }
 
 function validate(myform)
@@ -40,14 +50,14 @@ function validate(myform)
    }
 
    /* for password*/
-  var h = myform.pwd1.value;
+  var h = myform.password.value;
    if(h.length<8) {
      alert("Enter password, Minimum length: 8");
      return false;
    }
 
    /* for password confirmation*/
-   var i = myform.pwd1.value;
+   var i = myform.password.value;
    var j = myform.pwd2.value;
    if(i==j) {
      return true;
