@@ -2,13 +2,15 @@
   text-align: center;
   font-family: 'Pacifico';
   font-style: oblique;
-  margin-top: -55px;
+  margin-top: -40px;
+  margin-bottom: -10px;
   display: block;
   width: 100%;
   height: 100px;
-  font-size: 30px;
+  font-size: 28px;
   padding-bottom: 4px;
-  background-color: #ff0040;
+  background-color: #000;
+  color: #fff;
   border-radius: 4px;
 }
 
@@ -27,7 +29,7 @@
 }
 
 .myform ul {
-  width: 750px;
+  /*width: 750px;*/
   list-style-type: none;
   list-style-position: outside;
 }
@@ -48,13 +50,13 @@
 
 .myform input {
   height: 20px;
-  width: 220px;
+  width: 320px;
   padding: 5px 8px;
 }
 
 #country {
   height: 30px;
-  width: 239px;
+  width: 339px;
   padding: 5px 8px;
 }
 
@@ -92,16 +94,4 @@
   float: right;
   text-align: center;
   font-size: 11px;
-}
-
-#success {
-  background: #E2F1BB;
-  border: 1px solid #598800;
-  border-radius: 5px;
-  color: #000000;
-  display: none;
-  font-size: 13px;
-  margin: 0 0 15px 0;
-  padding: 8px;
-  width: 672px;
 }

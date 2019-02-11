@@ -14,11 +14,9 @@ function f1() {
     const type = pinput.getAttribute("type");
     if(type == "password") {
       pinput.setAttribute("type", "text");
-      //pbtn.innerHTML = "Hide";
     }
     else{
       pinput.setAttribute("type","password");
-      //pbtn.innerHTML = "Show";
     }
   });
 }
